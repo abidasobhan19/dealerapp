@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "733193345702",
+    "project_id": "test2-e74d5",
+    "storage_bucket": "test2-e74d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733193345702:android:2882e8f9ec9b3d9a5bf267",
+        "android_client_info": {
+          "package_name": "com.forbitbd.test2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733193345702-hrmt8begk4354j6gs50mhkql9hvgph4p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvHSkZkjenuIOlXnFcwxTGmxx5txjlM7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733193345702-hrmt8begk4354j6gs50mhkql9hvgph4p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
