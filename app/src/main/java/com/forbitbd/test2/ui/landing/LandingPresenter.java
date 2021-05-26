@@ -33,11 +33,11 @@ public class LandingPresenter implements LandingContract.Presenter {
                     @Override
                     public void onComplete(@NonNull Task<String> task) {
                         if (!task.isSuccessful()) {
-                            Log.w("hhhh", "Fetching FCM registration token failed", task.getException());
+
                             return;
                         }
 
-                        // Get new FCM registration token
+
                         String token = task.getResult();
 
                         Dealer dealer = AppPreference.getInstance((Context) mView).getDealer();
@@ -49,7 +49,7 @@ public class LandingPresenter implements LandingContract.Presenter {
                                     @Override
                                     public void onResponse(Call<Dealer> call, Response<Dealer> response) {
                                         if(response.isSuccessful()){
-                                            Log.d("HHHHH",response.body().getFcm_token());
+
                                         }
                                     }
 
@@ -60,7 +60,7 @@ public class LandingPresenter implements LandingContract.Presenter {
                                 });
 
 
-//                        Log.d("HHHHH", AppPreference.getInstance((Context) mView).getDealer().getEmail()+"");
+//
 //
 
 
@@ -69,4 +69,11 @@ public class LandingPresenter implements LandingContract.Presenter {
                     }
                 });
     }
+
+    @Override
+    public void googleclick() {
+        mView.googlelogout();
+    }
+
+
 }

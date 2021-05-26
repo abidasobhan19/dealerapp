@@ -1,24 +1,19 @@
-package com.forbitbd.test2;
+package com.forbitbd.test2.utils;
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.android.gms.auth.api.Auth;
+import com.forbitbd.test2.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class BaseActivity extends AppCompatActivity {
 
 
-//    private GoogleApiClient googleApiClient;
+
 
     private GoogleSignInClient client;
 
@@ -62,6 +57,7 @@ public class BaseActivity extends AppCompatActivity {
 
 
     public void signOut(){
+        AppPreference.getInstance(this).setDealer(null);
         client.signOut();
         mAuth.signOut();
     }

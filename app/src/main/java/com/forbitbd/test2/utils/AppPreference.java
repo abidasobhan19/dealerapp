@@ -4,6 +4,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.forbitbd.test2.models.Dealer;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class AppPreference {
 
@@ -18,6 +21,8 @@ public class AppPreference {
     private static final String ADDRESS="ADDRESS";
     private static final String ORGANIZATION_NAME="ORGANIZATION_NAME";
     private static final String FCM_TOKEN="FCM_TOKEN";
+    private static final String IS_ACTIVE="IS_ACTIVE";
+
 
 
     private static AppPreference appPreference = null;
@@ -48,6 +53,8 @@ public class AppPreference {
             editor.putString(ADDRESS,null);
             editor.putString(ORGANIZATION_NAME,null);
             editor.putString(FCM_TOKEN,null);
+            editor.putBoolean(IS_ACTIVE,false);
+
         }else{
             editor.putString(_ID,dealer.get_id());
             editor.putString(NAME,dealer.getName());
@@ -57,6 +64,7 @@ public class AppPreference {
             editor.putString(ADDRESS,dealer.getAddress());
             editor.putString(ORGANIZATION_NAME,dealer.getOrganization_name());
             editor.putString(FCM_TOKEN,dealer.getFcm_token());
+            editor.putBoolean(IS_ACTIVE,dealer.getIs_active());
         }
 
         editor.apply();
@@ -74,6 +82,7 @@ public class AppPreference {
         dealer.setAddress(sp.getString(ADDRESS,null));
         dealer.setOrganization_name(sp.getString(ORGANIZATION_NAME,null));
         dealer.setFcm_token(sp.getString(FCM_TOKEN,null));
+        dealer.setIs_active(sp.getBoolean(IS_ACTIVE,false));
 
         return dealer;
     }

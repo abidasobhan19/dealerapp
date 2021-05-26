@@ -11,6 +11,8 @@ public class Dealer implements Serializable {
     private String address;
     private String organization_name;
     private String fcm_token;
+    private Boolean is_active;
+
 
 
     public Dealer() {
@@ -77,6 +79,14 @@ public class Dealer implements Serializable {
 
     public void setFcm_token(String fcm_token) {
         this.fcm_token = fcm_token;
+    }
+
+    public Boolean getIs_active() {
+        return is_active;
+    }
+
+    public void setIs_active(Boolean is_active) {
+        this.is_active = is_active;
     }
 
 

@@ -1,4 +1,4 @@
-package com.forbitbd.test2;
+package com.forbitbd.test2.utils;
 
 
 import android.util.Log;
@@ -6,6 +6,8 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
+
+import com.forbitbd.test2.R;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 

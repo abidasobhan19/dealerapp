@@ -4,7 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.forbitbd.test2.BaseActivity;
+import com.forbitbd.test2.ui.Main.MainActivity;
+import com.forbitbd.test2.utils.BaseActivity;
 import com.forbitbd.test2.ui.landing.LandingPage;
 import com.forbitbd.test2.R;
 import com.google.android.gms.auth.api.Auth;
@@ -86,6 +87,6 @@ public class login extends BaseActivity implements View.OnClickListener, LoginCo
     @Override
     public void startMainActivity() {
         finish();
-        startActivity(new Intent(getApplicationContext(), LandingPage.class));
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
     }
 }

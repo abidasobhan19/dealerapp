@@ -3,15 +3,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 
 import com.forbitbd.test2.R;
+import com.forbitbd.test2.WelcomeListener;
+import com.forbitbd.test2.Welcome_Fragment;
 import com.forbitbd.test2.ui.login.login;
 
 import com.forbitbd.test2.ui.landing.LandingPage;
+import com.forbitbd.test2.utils.AppPreference;
+import com.forbitbd.test2.utils.BaseActivity;
 
 
-public class MainActivity extends AppCompatActivity implements MainContract.View {
+public class MainActivity extends BaseActivity implements MainContract.View, WelcomeListener {
 
 private MainPresenter mPresenter;
     @Override
@@ -26,6 +31,8 @@ private MainPresenter mPresenter;
 
 
 
+
+
     }
 
 
@@ -36,7 +43,19 @@ private MainPresenter mPresenter;
     }
 
     public void StartLandingpage(){
-        startActivity(new Intent(getApplicationContext(), LandingPage.class));
+        if(AppPreference.getInstance(this).getDealer().getIs_active()){
+            finish();
+            startActivity(new Intent(getApplicationContext(), LandingPage.class));
+        }else{
+
+
+
+            Welcome_Fragment welcome_fragment = new Welcome_Fragment();
+            welcome_fragment.setCancelable(false);
+            welcome_fragment.show(getSupportFragmentManager(), "GHGJHGJHGHJ");
+        }
+
+
     }
 
 
@@ -47,6 +66,8 @@ private MainPresenter mPresenter;
         super.onBackPressed();
         finishAffinity();
     }
-    }
+
+
+}
 
 

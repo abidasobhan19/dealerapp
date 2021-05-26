@@ -16,7 +16,6 @@
         <activity android:name=".ui.landing.LandingPage">
         </activity>
         <activity android:name=".ui.Main.MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,7 +23,7 @@
             </intent-filter>
         </activity>
         <service
-            android:name=".fcmService"
+            android:name=".utils.fcmService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

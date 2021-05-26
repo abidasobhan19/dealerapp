@@ -12,6 +12,7 @@ import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 
+import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
@@ -28,6 +29,9 @@ public interface ApiClient {
 
     @PUT("/dealer/{email}")
     Call<Dealer> updateDealer(@Path("email") String email,@Body Dealer dealer);
+
+    @GET("/dealer")
+    Call<Dealer>is_active();
 
 
 
