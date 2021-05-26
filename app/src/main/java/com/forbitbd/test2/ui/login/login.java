@@ -1,22 +1,15 @@
-package com.forbitbd.test2.login;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.forbitbd.test2.ui.login;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import com.forbitbd.test2.BaseActivity;
-import com.forbitbd.test2.LandingPage;
+import com.forbitbd.test2.ui.landing.LandingPage;
 import com.forbitbd.test2.R;
 import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.SignInButton;
-import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.tasks.Task;
 
 public class login extends BaseActivity implements View.OnClickListener, LoginContract.View{
     private static final String TAG = "MainActivity";
@@ -24,6 +17,7 @@ public class login extends BaseActivity implements View.OnClickListener, LoginCo
     private LoginPresenter mpresenter;
 
     private SignInButton signInButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +34,8 @@ public class login extends BaseActivity implements View.OnClickListener, LoginCo
 
 
     }
-//
+
+
 //    @Override
 //    public void onActivityResult(int requestCode, int resultCode, Intent data) {
 //        super.onActivityResult(requestCode, resultCode, data);

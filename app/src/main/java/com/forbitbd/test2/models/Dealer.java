@@ -10,8 +10,6 @@ public class Dealer implements Serializable {
     private String image;
     private String address;
     private String organization_name;
-
-
     private String fcm_token;
 
 

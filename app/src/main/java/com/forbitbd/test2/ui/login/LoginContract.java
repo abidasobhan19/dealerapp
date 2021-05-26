@@ -1,4 +1,4 @@
-package com.forbitbd.test2.login;
+package com.forbitbd.test2.ui.login;
 
 public interface LoginContract {
 

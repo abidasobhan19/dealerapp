@@ -1,19 +1,17 @@
-package com.forbitbd.test2.login;
+package com.forbitbd.test2.ui.login;
 
-import android.content.Intent;
+import android.content.Context;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.forbitbd.test2.BaseActivity;
-import com.forbitbd.test2.LandingPage;
 import com.forbitbd.test2.api.ApiClient;
 import com.forbitbd.test2.api.ServiceGenerator;
 import com.forbitbd.test2.models.Dealer;
+import com.forbitbd.test2.utils.AppPreference;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
-import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -116,6 +114,7 @@ public  LoginPresenter(LoginContract.View mview){
 
                 if(response.isSuccessful()){
 //                    Log.d(TAG, "onResponse: "+dealer);
+                    AppPreference.getInstance((Context) mview).setDealer(response.body());
                     mview.startMainActivity();
                 }
             }
