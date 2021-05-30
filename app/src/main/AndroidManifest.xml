@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.forbitbd.test2">
+    package="com.forbitbd.Dealer">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,10 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Test2">
-        <activity android:name=".ui.Profile.ProfileActivity"></activity>
-        <activity android:name=".ui.login.login" />
-        <activity android:name=".ui.landing.LandingPage"></activity>
-        <activity android:name=".ui.Main.MainActivity">
+        <activity android:name="com.forbitbd.Dealer.ui.Profile.ProfileActivity"></activity>
+        <activity android:name="com.forbitbd.Dealer.ui.login.login" />
+        <activity android:name="com.forbitbd.Dealer.ui.landing.LandingPage"></activity>
+        <activity android:name="com.forbitbd.Dealer.ui.Main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,7 +24,7 @@
         </activity>
 
         <service
-            android:name=".utils.fcmService"
+            android:name="com.forbitbd.Dealer.utils.fcmService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

@@ -9,52 +9,56 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_margin="3dp">
 
-        <ImageView
-            android:layout_width="250dp"
-            android:layout_height="220dp"
-            android:layout_gravity="center"
-            android:src="@drawable/logo" />
-
-        <TextView
+        <LinearLayout
+            android:id="@+id/one"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="20dp"
-            android:gravity="center"
-            android:text="Sorry! You are not Active User"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            android:gravity="center"
-            android:layout_marginTop="-100dp"
-            android:text="Please Contact :"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            android:gravity="center"
-            android:layout_marginTop="-100dp"
-            android:text="01821465858"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
-        <Button
-            android:id="@+id/btnok"
-            android:text="OK"
-            android:layout_gravity="center"
+            android:layout_height="wrap_content"
             android:background="@color/white"
-            android:layout_width="200dp"
-            android:layout_height="50dp"/>
+            android:orientation="vertical"
+            android:layout_marginBottom="5dp">
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sorry!"
+            android:textSize="30sp"
+            android:textColor="@color/red"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You Are Not A Active User"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="19sp"
+                android:background="@color/main"
+                android:text="Close" />
+        </LinearLayout>
 
     </LinearLayout>
 

@@ -8,35 +8,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:787992176028:android:f0befe5207fb028050d459",
-        "android_client_info": {
-          "package_name": "com.forbitbd.Dealer"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "787992176028-fgg3m310erdr1k3veu5bf8ngukhov4e6.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAxbpsh40bcYNWLGrhzEE-WfZS_lmbhaiQ"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "787992176028-fgg3m310erdr1k3veu5bf8ngukhov4e6.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:787992176028:android:fa1ffed8124a4e2b50d459",
         "android_client_info": {
           "package_name": "com.forbitbd.dealer"
