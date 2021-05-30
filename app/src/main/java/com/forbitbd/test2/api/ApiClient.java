@@ -2,9 +2,11 @@ package com.forbitbd.test2.api;
 
 
 import com.forbitbd.test2.models.Dealer;
+import com.forbitbd.test2.models.Device;
 
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import okhttp3.MultipartBody;
@@ -13,6 +15,7 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
@@ -30,11 +33,13 @@ public interface ApiClient {
     @PUT("/dealer/{email}")
     Call<Dealer> updateDealer(@Path("email") String email,@Body Dealer dealer);
 
-    @GET("/dealer")
-    Call<Dealer>is_active();
+    @POST("/connection")
+    Call<Device> registerDevice(@Body Device data);
 
+    @GET("/connection/{id}/connected")
+    Call<List<Device>> getConnectedDevice(@Path("id") String id);
 
-
-
+    @GET("/connection/{id}/pending")
+    Call<List<Device>> getPendingDevice(@Path("id") String id);
 
 }

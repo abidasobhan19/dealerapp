@@ -41,8 +41,11 @@ public  LoginPresenter(LoginContract.View mview){
 
 
 
-
 }
+
+
+
+
 
     public void startAutentication(GoogleSignInResult result) {
         if (result.isSuccess()) {
@@ -113,9 +116,10 @@ public  LoginPresenter(LoginContract.View mview){
             public void onResponse(Call<Dealer> call, Response<Dealer> response) {
 
                 if(response.isSuccessful()){
-//                    Log.d(TAG, "onResponse: "+dealer);
+                    Log.d(TAG, "onResponse: "+dealer);
                     AppPreference.getInstance((Context) mview).setDealer(response.body());
                     mview.startMainActivity();
+
                 }
             }
 
@@ -126,6 +130,8 @@ public  LoginPresenter(LoginContract.View mview){
         });
 
     }
+
+
 
 
     @Override

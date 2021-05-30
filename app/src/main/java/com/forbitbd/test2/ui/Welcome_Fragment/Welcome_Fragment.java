@@ -1,25 +1,18 @@
-package com.forbitbd.test2;
+package com.forbitbd.test2.ui.Welcome_Fragment;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.forbitbd.test2.utils.AppPreference;
-import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.forbitbd.test2.R;
 
 
 public class Welcome_Fragment  extends androidx.fragment.app.DialogFragment  implements View.OnClickListener {
@@ -40,6 +33,8 @@ public class Welcome_Fragment  extends androidx.fragment.app.DialogFragment  imp
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.listener = (WelcomeListener) getActivity();
+
+
 
 
     }

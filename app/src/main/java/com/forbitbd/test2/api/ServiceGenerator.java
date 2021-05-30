@@ -8,8 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ServiceGenerator {
     private static final String BASE_URL = " http:103.144.201.114:3001";
-//    private static final String BASE_URL = "http://167.71.227.221:2255";
-//    private static final String BASE_URL = "http://10.0.2.2:2255/";
+
 
     private static final OkHttpClient okHttpClient = new OkHttpClient.Builder()
             .readTimeout(60, TimeUnit.SECONDS)

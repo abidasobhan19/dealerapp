@@ -4,7 +4,7 @@ public interface LoginContract {
 
 
     interface Prensenter{
-        void google_click();
+      void google_click();
 
     }
 

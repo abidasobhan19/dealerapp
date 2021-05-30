@@ -1,12 +1,15 @@
 package com.forbitbd.test2.utils;
 
 import android.os.Bundle;
+import android.widget.Toolbar;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import com.forbitbd.test2.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -18,9 +21,9 @@ public class BaseActivity extends AppCompatActivity {
     private GoogleSignInClient client;
 
 
-
+     MaterialToolbar toolbar;
     private FirebaseAuth mAuth;
-    private FirebaseUser currentUser;
+
 
 
     @Override
@@ -61,5 +64,13 @@ public class BaseActivity extends AppCompatActivity {
         client.signOut();
         mAuth.signOut();
     }
+
+    public void setupToolbar(int id){
+        toolbar = findViewById(id);
+        setSupportActionBar(toolbar);
+
+    }
+
+
 
 }
